@@ -2,6 +2,10 @@
 
 History
 =======
+1.3.1 (2022-07-07)
+------------------
+- Fix refex pattern for camel_to_underscore
+
 1.3.0 (2021-11-14)
 ------------------
 - Merge pull request #104

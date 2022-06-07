@@ -7,7 +7,7 @@ from django.utils.functional import lazy
 
 from rest_framework.utils.serializer_helpers import ReturnDict
 
-from djangorestframework_camel_case.util import camelize, underscoreize
+from drf_camel_case.util import camelize, underscoreize
 
 settings.configure()
 
@@ -17,9 +17,9 @@ class ImportTest(TestCase):
         """
         A quick test that just imports everything, should crash in case any Django or DRF modules change
         """
-        from djangorestframework_camel_case import parser
-        from djangorestframework_camel_case import render
-        from djangorestframework_camel_case import settings
+        from drf_camel_case import parser
+        from drf_camel_case import render
+        from drf_camel_case import settings
 
         assert parser
         assert render
@@ -95,6 +95,7 @@ class CamelToUnderscoreTestCase(TestCase):
             "anotherKey10": 12,
             "optionS1": 13,
             "optionS10": 14,
+            "UPPERCASE": 15,
         }
         output = {
             "two_word": 1,
@@ -111,6 +112,7 @@ class CamelToUnderscoreTestCase(TestCase):
             "another_key_10": 12,
             "option_s_1": 13,
             "option_s_10": 14,
+            "uppercase": 15,
         }
         self.assertEqual(underscoreize(data), output)
 
@@ -209,6 +211,7 @@ class CamelToUnderscoreQueryDictTestCase(TestCase):
             "anotherKey10": 12,
             "optionS1": 13,
             "optionS10": 14,
+            "UPPERCASE": 15,
         }
         query_dict.update(data)
 
@@ -229,6 +232,7 @@ class CamelToUnderscoreQueryDictTestCase(TestCase):
             "another_key_10": 12,
             "option_s_1": 13,
             "option_s_10": 14,
+            "uppercase": 15,
         }
         output_query.update(output)
         self.assertEqual(underscoreize(query_dict), output_query)
