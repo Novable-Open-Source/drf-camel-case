@@ -2,12 +2,13 @@
 Credits
 =======
 
+
 Development Lead
 ----------------
-
-* Vitaly Babiy <vbabiy86@gmail.com>
+* Fernando Collado <fernando@novable.com>
 
 Contributors
 ------------
 
-None yet. Why not be the first?
+* (Original repository owner) Vitaly Babiy <vbabiy86@gmail.com>
+* Junyu Li - (`qununb <https://github.com/qununb>`_)
